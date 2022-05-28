@@ -6,6 +6,7 @@ terraform {
     }
   }
 
+  # need to create a S3 bucket with the same params
   backend "s3" {
     bucket = "app-001-tfstate"
     key    = "sandbox/terraform.tfstate"
