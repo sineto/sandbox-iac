@@ -6,6 +6,12 @@ terraform {
     }
   }
 
+  backend "s3" {
+    bucket = "app-001-tfstate"
+    key    = "sandbox/terraform.tfstate"
+    region = "us-east-1"
+  }
+
   required_version = "~> 1.2.1"
 }
 
